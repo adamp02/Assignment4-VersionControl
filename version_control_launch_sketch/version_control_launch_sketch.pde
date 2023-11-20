@@ -7,12 +7,12 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int i = particles.size() - 1; i > 0; i--){ // Loop backwards through arrayList
-    particles.get(i).update();
-    particles.get(i).display();
+  for (int j = particles.size() - 1; j > 0; j--){ // Loop backwards through arrayList
+    particles.get(j).update();
+    particles.get(j).display();
     
-    if (particles.get(i).position.x > height) {
-     particles.remove(i); // Remove particles if they go off the screen
+    if (particles.get(j).position.x > height) {
+     particles.remove(j); // Remove particles if they go off the screen
     }
     
   }
